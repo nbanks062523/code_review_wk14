@@ -1,20 +1,23 @@
 # Title
-DE101 Bootcamp- Code Review Week 12
+DE101 Bootcamp- Code Review Week 14
 
 # Name
-Nikisha Banks
+Nikisha Banks, Alex Wallace
 
 # Technologies Used: 
-Git hub, Visual Studio Code, Airflow, Docker
+Git hub, Visual Studio Code, Airflow, Docker, Google Big Query
 
 # Languages and tools used: 
-DAG Python and Bash Operators
+DAG Python Operators
 
 # Description:
 In this project, Airflow was used to orchestrate a workflow that did the following:
-  1.Create a DAG (Directed Acyclic Graph) that uses a file sensor to check if a file has been uploaded to a folder named "data"
-  2.Create a task that reads each row in the file and checks to see if the values in each row match values in a given list. If there is a match, the task adds the item to a new list
-  3.Create a task that uses a Python function that takes the new list as an argument and prints the item that has the most occurrences  
+1.Create a DAG (Directed Acyclic Graph) that executed tasks to add CSV files to Google Cloud
+    1.The DAG file begins with two functions that act as a checklist to ensure that the data files are properly placed and to ensure that the DAG is able to connect to the Big Query client
+    2. A DAG is then created with it's accompanying tasks
+    3. The first 2 tasks run the checklist functions, followed by an empty operator for branching the table creation tasks
+    4. The next task runs a loop that loads each table
+    5. Finally, another empty operator is used to bring the tasks back together 
 
 # Setup/Installation Requirements:
 - To see the code files in this project:
@@ -48,19 +51,12 @@ In this project, Airflow was used to orchestrate a workflow that did the followi
   4. type "docker volume list" to confirm that there are no volumes
    
 # Known Bugs
-The following errors occurred while running the DAG in Airflow
-
-![Image](https://github.com/nbanks062523/code_review_wk12/blob/1e5c521a2ec455adc3d7186542dde3d6b095fcbd/Week12_ErrorMsg1.png)
-
-![Image](https://github.com/nbanks062523/code_review_wk12/blob/1e5c521a2ec455adc3d7186542dde3d6b095fcbd/Week12_ErrorMsg2.png)
-
+no known bugs
 
 # Project Visuals
 ## DAG 
-The DAG Diagram in this project shows the order of tasks and their dependencies, if any
-  1. The flow starts with the 'wait_for_file' task that creates a DAG that uses a File Sensor to check if the votes.csv file has been delivered to the "data" folder
-  2. The second task is the 'Read_file_task', this task is a Python Operator task that will read each row in the votes csv file and check whether the value is in a given list called flavors_choices and appends it to a new list
-  3. The third task is also a Python Operator task that takes the list from the previous task and prints the item that appears the most
+The DAG Diagram in this project shows the order of tasks and their dependencies, if any.
+
      
 ![Image](https://github.com/nbanks062523/code_review_wk12/blob/e98d628a7965382230a8f601a5d8ec97f9bc17bf/Week12_DAGOutput.png)
 ---
