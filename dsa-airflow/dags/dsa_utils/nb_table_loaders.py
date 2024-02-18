@@ -32,6 +32,7 @@ def get_client() -> bigquery.Client:
 
 
 # global variable to hold data files
+# the 'config' is referencing the config.yml file which maps the csv files to a variable 
 DATA_FILES = {
     'food_inflation_BM': os.path.join(DATA_DIR, config['FoodInflation_data']),
     'grocery_prices_BM': os.path.join(DATA_DIR, config['MonthlyGroceryPrices_data']),
@@ -39,7 +40,7 @@ DATA_FILES = {
     'snap_population': os.path.join(DATA_DIR, config['SNAPPop_data']),
     'snap_program_part': os.path.join(DATA_DIR, config['SNAPPrgPartc_data']),
 }
-
+ 
 
 def load_table(table_name: str):
     """

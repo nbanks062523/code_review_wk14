@@ -3,12 +3,13 @@ from google.cloud import bigquery
 from google.cloud.exceptions import NotFound
 
 # local module imports
-from dsa_utils.alex_utils import logger, config
+from dsa_utils.nb_utils import logger, config
 
 
 # setup the bigquery client
 PROJECT_NAME = config['project']
 DATASET_NAME = config['dataset']
+
 # starting a variable name with _ is python convention to say 
 # this is a private module variable and should not be imported outside of this module
 _client: bigquery.Client = None
@@ -34,38 +35,38 @@ def get_client() -> bigquery.Client:
 
 # Food Inflation Rates by Month
 FOODINFLATION_SCHEMA = [
-    bigquery.SchemaField('Year', 'INTEGER',mode='NULLABLE'),
-    bigquery.SchemaField('Jan', 'INTEGER', mode='NULLABLE'),
-    bigquery.SchemaField('Feb', 'INTEGER', mode='NULLABLE'),
-    bigquery.SchemaField('Mar', 'INTEGER', mode='NULLABLE'),
-    bigquery.SchemaField('Apr', 'INTEGER', mode='NULLABLE'),
-    bigquery.SchemaField('May', 'INTEGER', mode='NULLABLE'),
-    bigquery.SchemaField('Jun', 'INTEGER', mode='NULLABLE'),
-    bigquery.SchemaField('Jul', 'INTEGER', mode='NULLABLE'),
-    bigquery.SchemaField('Aug', 'INTEGER', mode='NULLABLE'),
-    bigquery.SchemaField('Sep', 'INTEGER', mode='NULLABLE'),
-    bigquery.SchemaField('Oct', 'INTEGER', mode='NULLABLE'),
-    bigquery.SchemaField('Nov', 'INTEGER', mode='NULLABLE'),
-    bigquery.SchemaField('Dec', 'INTEGER', mode='NULLABLE'),
+    bigquery.SchemaField('Year','INTEGER',mode='NULLABLE'),
+    bigquery.SchemaField('Jan','INTEGER', mode='NULLABLE'),
+    bigquery.SchemaField('Feb','INTEGER', mode='NULLABLE'),
+    bigquery.SchemaField('Mar','INTEGER', mode='NULLABLE'),
+    bigquery.SchemaField('Apr','INTEGER', mode='NULLABLE'),
+    bigquery.SchemaField('May','INTEGER', mode='NULLABLE'),
+    bigquery.SchemaField('Jun','INTEGER', mode='NULLABLE'),
+    bigquery.SchemaField('Jul','INTEGER', mode='NULLABLE'),
+    bigquery.SchemaField('Aug','INTEGER', mode='NULLABLE'),
+    bigquery.SchemaField('Sep','INTEGER', mode='NULLABLE'),
+    bigquery.SchemaField('Oct','INTEGER', mode='NULLABLE'),
+    bigquery.SchemaField('Nov','INTEGER', mode='NULLABLE'),
+    bigquery.SchemaField('Dec','INTEGER', mode='NULLABLE'),
 ]
 
 # Monthly Grocery Prices by State
 MGROCPRICES_SCHEMA = [
-    bigquery.SchemaField('Rank', 'INTEGER',mode='NULLABLE'),
-    bigquery.SchemaField('State', 'STRING', mode='NULLABLE'),
-    bigquery.SchemaField('City', 'STRING', mode='NULLABLE'),
-    bigquery.SchemaField('Analyzed Population', 'INTEGER', mode='NULLABLE'),
-    bigquery.SchemaField('Average Monthly Cost of Groceries Per Person', 'STRING', mode='NULLABLE'),
-    bigquery.SchemaField('state_abbrev', 'STRING', mode='NULLABLE'),
+    bigquery.SchemaField('Rank','INTEGER',mode='NULLABLE'),
+    bigquery.SchemaField('State','STRING', mode='NULLABLE'),
+    bigquery.SchemaField('City','STRING', mode='NULLABLE'),
+    bigquery.SchemaField('Analyzed Population','INTEGER', mode='NULLABLE'),
+    bigquery.SchemaField('Average Monthly Cost of Groceries Per Person','STRING', mode='NULLABLE'),
+    bigquery.SchemaField('state_abbrev','STRING', mode='NULLABLE'),
 ]
 
 # SNAP Poverty numbers by Year
 SNAPPOV_SCHEMA = [
-    bigquery.SchemaField('Record ID', 'INTEGER',mode='NULLABLE'),
-    bigquery.SchemaField('State_CD', 'STRING', mode='NULLABLE'),
-    bigquery.SchemaField('2006', 'INTEGER', mode='NULLABLE'),
-    bigquery.SchemaField('2007', 'INTEGER', mode='NULLABLE'),
-    bigquery.SchemaField('2010', 'INTEGER', mode='NULLABLE'),
+    bigquery.SchemaField('Record ID','INTEGER',mode='NULLABLE'),
+    bigquery.SchemaField('State_CD','STRING', mode='NULLABLE'),
+    bigquery.SchemaField('2006','INTEGER', mode='NULLABLE'),
+    bigquery.SchemaField('2007','INTEGER', mode='NULLABLE'),
+    bigquery.SchemaField('2010','INTEGER', mode='NULLABLE'),
 ]
 
 # SNAP Population numbers by Year
