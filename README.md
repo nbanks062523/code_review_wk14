@@ -56,16 +56,27 @@ no known bugs
 # Project Visuals
 ## DAG 
 The DAG Diagram in this project shows the order of tasks and their dependencies, if any.
-
-     
-![Image](https://github.com/nbanks062523/code_review_wk12/blob/e98d628a7965382230a8f601a5d8ec97f9bc17bf/Week12_DAGOutput.png)
 ---
 ## DAG Final Outcome
-As shown in the image the DAG failed after 3 attempts. 
+As shown in the image the DAG failed several times due to Google permission issues and finally succeeded on the 7th attempt  
 
-![Image](https://github.com/nbanks062523/code_review_wk12/blob/e98d628a7965382230a8f601a5d8ec97f9bc17bf/Week12_DAGOutput2.png)
+![Image](https://github.com/nbanks062523/code_review_wk14/blob/6c5dea04c7b297e1933e6297a24483e99800f5a1/DAGFinalResults_Week14.png)
+
+![Image](https://github.com/nbanks062523/code_review_wk14/blob/6c5dea04c7b297e1933e6297a24483e99800f5a1/DAG_graph_Final.png)
 ---
+## Final Data Outcome
+As shown in the images, the following tables were created by the DAG: 
+  1.Food Inflation by month - A table that shows the inflation rates of food by month year over year
+  2.Grocery Prices by month - A table that shows the price of groceries month over month by state
+  3.SNAP Population, SNAP Poverty Population, SNAP Program Participants - These tables display data around the Supplemental Nutrition Assistance Program and its recipients over time by state    
 
+![Image](https://github.com/nbanks062523/code_review_wk14/blob/6c5dea04c7b297e1933e6297a24483e99800f5a1/DataTables_Wk14.png)
+
+![Image](https://github.com/nbanks062523/code_review_wk14/blob/6c5dea04c7b297e1933e6297a24483e99800f5a1/SampleData_FoodInflation.png)
+
+![Image](https://github.com/nbanks062523/code_review_wk14/blob/6c5dea04c7b297e1933e6297a24483e99800f5a1/SampleData_GroceryPrices.png)
+
+---
 # License
 *Copyright 2024, Data Stack Academy Fall 2023 Cohort*
 
@@ -73,5 +84,4 @@ As shown in the image the DAG failed after 3 attempts.
 
 *The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.*
 
-*THE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.*# code_review_wk12
-# code_review_wk14
+*THE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.*# code_review_wk14
