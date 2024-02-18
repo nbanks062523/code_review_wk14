@@ -30,9 +30,11 @@ def get_this_dir(filepath: str = __file__) -> str:
 
 # default config file path when running locally (not within airflow docker container)
 # get the path from airflow variables OR set it to default local path
+
 _default_config_path = os.path.join(get_this_dir(), '../config.yml')
 
-CONF_PATH = Variable.get('config_file', default_var=_default_config_path)
+CONF_PATH = Variable.get('config_file', default_var = _default_config_path)
+
 config: dict = {}
 with open(CONF_PATH) as open_yaml:
     config: dict =  yaml.full_load(open_yaml)
